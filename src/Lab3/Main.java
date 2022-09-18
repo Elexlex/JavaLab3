@@ -2,6 +2,8 @@ package Lab3;
 import java.util.Scanner;
 
 public class Main {
+
+    //menu for calling all methods
     public static void main(String[] args){
         Scanner num = new Scanner(System.in);
         int menu = 0;
@@ -27,18 +29,24 @@ public class Main {
             }
         }while (menu!=6);
     }
+
+    //generating a new line
     static String newLine(){
         Scanner name = new Scanner(System.in);
        System.out.println("Input the line:");
         String line = name.nextLine();
        return line;
     }
+
+    //checking the last two letters
     static void task1(){
         String line;
         line = newLine();
         boolean check = line.endsWith("ed");
         System.out.println(check);
     }
+
+    //summing all the numbers in the line
     static void task2(){
         String line;
         int summary = 0;
@@ -52,6 +60,8 @@ public class Main {
         }
         System.out.println(summary);
     }
+
+    //searching the longest sequence
     static void task3(){
         String line;
         line = newLine();
@@ -75,6 +85,8 @@ public class Main {
         }
         System.out.println("\nThe length is: " + (maxCount+1));
     }
+
+    //replacing each word on a new line
     static void task4(){
         String line;
         line = newLine();
@@ -85,6 +97,8 @@ public class Main {
                 System.out.println();
         }
     }
+
+    //merging two lines into one
     static void task5(){
         String line1, line2;
         line1 = newLine();
